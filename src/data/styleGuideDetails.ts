@@ -1,0 +1,866 @@
+import { TattooStyleDetail } from '../types';
+
+export const TATTOO_STYLE_DETAILS: Record<string, TattooStyleDetail> = {
+  'Fine Line': {
+    id: 'style-detail-fine-line',
+    styleTag: 'Fine Line',
+    serviceTitle: 'Fine Line Tattoos',
+    headline: 'Surgical Single-Needle Precision & Micro-Botanicals',
+    explanation:
+      'Fine Line tattooing utilizes microscopic single-needle configurations (1RL and 3RL) to lay delicate, razor-sharp outlines into the papillary dermis. Characterized by breathtaking subtlety, intricate stippling, and botanical elegance, fine line creates a refined, whisper-soft aesthetic reminiscent of classical graphite sketches on parchment.',
+    artisticPhilosophy:
+      'Softness demands uncompromising mechanical discipline. Without heavy dark fields to hide behind, every millimeter of needle travel must be steady, intentional, and attuned to skin tension.',
+    characteristics: [
+      {
+        title: 'Needle & Voltage Setup',
+        badge: '1RL – 3RL Micro Needle',
+        description: 'Tightly calibrated surgical micro-needles with low voltage oscillation to prevent dermal blowouts while ensuring crisp line retention.',
+        technicalNote: '0.25mm bugpin taper for delicate botanical veins and miniature numerals.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Healed Tone & Longevity',
+        badge: 'Soft Charcoal Finish',
+        description: 'Heals to a graceful, natural silver-grey hue that seamlessly integrates with human skin tone rather than looking stamped.',
+        technicalNote: 'Formulated with ultra-fine particle carbon black to prevent pigment spreading over decades.',
+        iconType: 'clock',
+      },
+      {
+        title: 'Pain & Trauma Index',
+        badge: 'Mild (2/10) • Fast Recovery',
+        description: 'Significantly less dermal trauma than heavy packing. Redness typically subsides within 18–24 hours with a gentle 7–10 day superficial heal.',
+        technicalNote: 'Zero deep puncturing; optimal for sensitive skin types.',
+        iconType: 'shield',
+      },
+      {
+        title: 'Contrast & Shading Method',
+        badge: 'Stipple & Whip Shading',
+        description: 'Gently builds dimensional value using pepper-stippled dot matrices and ample negative skin breathing space.',
+        technicalNote: 'Preserves luminous skin contrast across complex geometric planes.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Optimal Anatomical Zones',
+        badge: 'Inner Forearm, Sternum, Ribs',
+        description: 'Thrives on flatter, stable anatomical planes: clavicles, inner bicep, spine, wrists, and shoulder blades.',
+        technicalNote: 'Avoids heavy high-friction joints like palms and bottom of feet.',
+        iconType: 'layers',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-fl-1',
+        title: 'Celestial Botanical Rose',
+        imageUrl: 'https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Inner Forearm',
+        technique: 'Single-needle 1RL with micro-stippled petal gradients',
+        caption: 'Notice the feather-light transparency in the outer petals and delicate orbital rings that float effortlessly on the skin.',
+      },
+      {
+        id: 'ex-fl-2',
+        title: 'Solar Eclipse & Micro Geometry',
+        imageUrl: 'https://images.unsplash.com/photo-1590246814883-578301414436?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Ribs / Lateral Torso',
+        technique: 'Continuous hairline tracking and celestial coordinates',
+        caption: 'Harmonious mathematical circles and compass lines executed with zero deviation or ink pooling.',
+      },
+      {
+        id: 'ex-fl-3',
+        title: 'Minimalist Topographic Ridge',
+        imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Above Ankle & Tendon',
+        technique: 'Single pass contouring with dot-matrix altitude notations',
+        caption: 'Understated elegance that honors the natural curvature of the Achilles tendon with absolute discretion.',
+      },
+    ],
+    typicalSessionHours: '1.5 – 4 hours',
+    startingPriceGbp: '£220 / hr',
+    healedLongevity: 'Permanent • Touch-up advised at 5–7 years for high-sun areas',
+    painProfile: 'Low • Ideal for first-time collectors',
+    recommendedPlacements: ['Inner Forearm', 'Collarbone', 'Ribs', 'Upper Spine', 'Sternum'],
+  },
+
+  'Black & Grey': {
+    id: 'style-detail-black-grey',
+    styleTag: 'Black & Grey',
+    serviceTitle: 'Black & Grey Tattoos',
+    headline: 'Chiaroscuro Depth, Velvety Shadows & Sculptural Form',
+    explanation:
+      'Originating from fine art classical drawing techniques, Black & Grey tattooing relies on diluting intense black pigment into carefully measured grey washes. Rather than hard outlines, pieces are defined through dramatic lighting gradients, velvet-black anchors, and delicate feathering that mimic Renaissance marble and charcoal masterpieces.',
+    artisticPhilosophy:
+      'We treat the human body as living marble. Value contrast is calibrated to human musculature, so light bounces across the tattoo dynamically as the wearer moves.',
+    characteristics: [
+      {
+        title: 'Custom Greywash System',
+        badge: '5-Tier Wash Dilutions',
+        description: 'Proprietary studio formula ranging from 10% ghost wash for skin highlights to 100% triple-black saturation for impenetrable shadows.',
+        technicalNote: 'Zero brown undertones; heals to clean cool silver and pewter tones.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Sculptural Chiaroscuro',
+        badge: 'Optical Depth & Volume',
+        description: 'Employs high-contrast baroque chiaroscuro lighting to make figures and drapery appear three-dimensional and tactile.',
+        technicalNote: 'Carefully balances deep black pools against un-inked skin highlights.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Needle Array & Soft Shading',
+        badge: 'Curved Soft-Edge Mags',
+        description: 'Utilizes curved magnum groupings (15CM & 23CM) that glide across the epidermis without creating harsh linear transitions.',
+        technicalNote: 'Smooth circular blending eliminates harsh brush marks or blotching.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Enduring Aging Profile',
+        badge: 'Decades of Archival Stability',
+        description: 'Black carbon is the most stable pigment in human skin. It will never fade into uneven colors and retains contrast over a lifetime.',
+        technicalNote: 'Retains dramatic impact even after decades of natural skin aging.',
+        iconType: 'clock',
+      },
+      {
+        title: 'Pain & Trauma Index',
+        badge: 'Moderate (4/10) • Multi-layer Shading',
+        description: 'Smooth magnum shading distributes needle pressure evenly, resulting in manageable sessions and uniform peeling.',
+        technicalNote: 'Typical heal time is 12–14 days.',
+        iconType: 'shield',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-bg-1',
+        title: 'The Fallen Archangel',
+        imageUrl: 'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Right Upper Arm & Shoulder Cap',
+        technique: 'Deep carbon packing with feathered feather textures',
+        caption: 'Notice the dramatic light cascading over the musculature and the smoky background fade that dissolves into negative skin.',
+      },
+      {
+        id: 'ex-bg-2',
+        title: 'Anatomy of Time: Chronos & Hourglass',
+        imageUrl: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Outer Bicep',
+        technique: 'Curved magnum shading with antique clock gear chiaroscuro',
+        caption: 'Micro-fractures in the glass and falling sand particles rendered purely through subtle grey wash gradations.',
+      },
+      {
+        id: 'ex-bg-3',
+        title: 'Baroque Cathedral Drapery',
+        imageUrl: 'https://images.unsplash.com/photo-1550537687-c91072c4792d?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Inner Forearm to Wrist',
+        technique: '5-tier dilution wash with soft white highlights',
+        caption: 'Velvety stone texture with high-contrast shadows that give the illusion of carved Italian marble.',
+      },
+    ],
+    typicalSessionHours: '3 – 6 hours',
+    startingPriceGbp: '£200 / hr',
+    healedLongevity: 'Exceptional (Lifetime permanence)',
+    painProfile: 'Moderate • Very comfortable shading passes',
+    recommendedPlacements: ['Full Sleeve', 'Outer Arm', 'Chest', 'Upper Back', 'Calf'],
+  },
+
+  'Realism': {
+    id: 'style-detail-realism',
+    styleTag: 'Realism',
+    serviceTitle: 'Photo-Realism',
+    headline: 'Hyper-Detailed Portraiture, Wildlife & Classical Sculpture',
+    explanation:
+      'Realism pushes the technical threshold of dermal art by translating photographs into hyper-lifelike skin imagery without relying on illustrative outlines. Every pore, specular reflection, iris striation, and textile weave is mapped out through microscopic value transitions.',
+    artisticPhilosophy:
+      'True realism is not mechanical copying; it is the deep comprehension of how photons illuminate human forms and textures in physical space.',
+    characteristics: [
+      {
+        title: 'No Hard Outlines',
+        badge: 'Pure Value Boundaries',
+        description: 'Boundaries between forms are defined strictly through adjacent value shifts and edge control rather than visible black wireframes.',
+        technicalNote: 'Preserves the illusion of living, breathing photographic depth.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Micro-Texturing Techniques',
+        badge: 'Pore & Texture Mapping',
+        description: 'Specialized textured needle taps replicate skin pores, weathered marble cracks, glistening moisture, and animal fur coat depth.',
+        technicalNote: 'Requires steady magnification and clinical surgical lighting.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Specular Lighting & Contrast',
+        badge: 'Photographic Dynamic Range',
+        description: 'Carefully preserved highlights juxtaposed against deepest obsidian pools produce an almost holographic illusion.',
+        technicalNote: 'Calculated using digital high-dynamic-range lighting maps.',
+        iconType: 'eye',
+      },
+      {
+        title: 'Session Complexity',
+        badge: 'Intensive Layering (5–8 hrs)',
+        description: 'Requires dedicated patient layering. Multi-pass shading takes slightly longer to settle as skin sheds its superficial stratum corneum.',
+        technicalNote: 'Full tonal depth reveals itself beautifully at week 4.',
+        iconType: 'clock',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-rl-1',
+        title: 'Renaissance Marble Bust',
+        imageUrl: 'https://images.unsplash.com/photo-1550537687-c91072c4792d?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Outer Calf',
+        technique: 'Sculptural value layering with translucent marble highlights',
+        caption: 'The lifelike gaze and realistic marble fractures make the stone appear tangible under changing room lighting.',
+      },
+      {
+        id: 'ex-rl-2',
+        title: 'Anatomy of Time Chronos',
+        imageUrl: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Outer Bicep',
+        technique: 'High-contrast bone texture and reflective metallic clockwork',
+        caption: 'Photographic rendering of antique mechanisms with microscopic teeth and reflections in aged glass.',
+      },
+      {
+        id: 'ex-rl-3',
+        title: 'The Fallen Archangel Portrait',
+        imageUrl: 'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Shoulder & Upper Arm',
+        technique: 'Layered feather plumage with chiaroscuro facial shadows',
+        caption: 'Subtle anatomical muscle striations and individualized feather barbs rendered with seamless precision.',
+      },
+    ],
+    typicalSessionHours: '4 – 8+ hours',
+    startingPriceGbp: '£260 / hr',
+    healedLongevity: 'High • Settles into rich cinematic contrast',
+    painProfile: 'Moderate to High • Extended multi-pass detail',
+    recommendedPlacements: ['Bicep / Forearm', 'Calf', 'Upper Back', 'Thigh'],
+  },
+
+  'Traditional': {
+    id: 'style-detail-traditional',
+    styleTag: 'Traditional',
+    serviceTitle: 'Traditional Tattoos',
+    headline: 'Bold Heritage Americana, Saturated Primary Inks & Unbreakable Presence',
+    explanation:
+      'Rooted in the century-old lineage of maritime and western heritage tattooing. Characterized by heavyweight black outlines, rock-solid black shade sweeps, and richly saturated primary pigments (crimson, emerald, gold, navy) that stay striking for a lifetime.',
+    artisticPhilosophy:
+      'Bold will hold. Traditional tattooing strips away fleeting design gimmicks to focus on the eternal fundamentals: unshakeable line weight, generous open skin, and pigments built to outlive decades of sunlight.',
+    characteristics: [
+      {
+        title: 'Heavyweight Outlines',
+        badge: '9RL to 14RL Liners',
+        description: 'Unapologetic, solid black framework lines that ensure the motif remains instantly legible from 20 feet away.',
+        technicalNote: 'Pounded cleanly with balanced needle depth for permanence.',
+        iconType: 'needle',
+      },
+      {
+        title: 'The Rule of Thirds',
+        badge: '1/3 Black, 1/3 Color, 1/3 Skin',
+        description: 'A disciplined balance of solid black shading, vibrant pigment fill, and un-inked open skin that lets the piece breathe.',
+        technicalNote: 'Prevents the tattoo from turning into a dark indistinguishable blob over age.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Maximum Pigment Saturation',
+        badge: 'Dense Hand-Packed Color',
+        description: 'Inks are solidly packed with flat shaders to achieve maximum pigment load beneath the skin.',
+        technicalNote: 'High UV resistance against fading.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Iconic Flash Vocabulary',
+        badge: 'Americana Motifs',
+        description: 'Panthers, sovereign eagles, anchors, daggers, roses, swallows, and maritime heraldry.',
+        technicalNote: 'Timeless cultural symbols that never fall out of fashion.',
+        iconType: 'shield',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-tr-1',
+        title: 'Panther & Dagger Heritage',
+        imageUrl: 'https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Upper Thigh',
+        technique: 'Heavy 11RL outline with deep blood-crimson and jet-black sweep',
+        caption: 'Notice the razor-sharp white tooth highlights and intense black saturation across the snarling jawline.',
+      },
+      {
+        id: 'ex-tr-2',
+        title: 'Sovereign Eagle & Banner',
+        imageUrl: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Chest Panel',
+        technique: 'Saturated gold and emerald plumage with vintage typography',
+        caption: 'Classic American Traditional symmetry crafted to frame the pectoral musculature.',
+      },
+      {
+        id: 'ex-tr-3',
+        title: 'Maritime Anchor & Swallow',
+        imageUrl: 'https://images.unsplash.com/photo-1590246814883-578301414436?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Outer Forearm',
+        technique: 'Solid black whip-shading and classic rope coil details',
+        caption: 'A timeless gap-filler that honors the early 20th-century origins of the tattoo craft.',
+      },
+    ],
+    typicalSessionHours: '2 – 5 hours',
+    startingPriceGbp: '£180 / hr',
+    healedLongevity: 'Maximum • The most enduring style in existence',
+    painProfile: 'Moderate to High • Solid packing technique',
+    recommendedPlacements: ['Forearm', 'Bicep', 'Thigh', 'Calf', 'Chest'],
+  },
+
+  'Neo-Traditional': {
+    id: 'style-detail-neo-traditional',
+    styleTag: 'Neo-Traditional',
+    serviceTitle: 'Neo-Traditional',
+    headline: 'Illustrative Art Nouveau, Rich Jewel Tones & Organic Filigree',
+    explanation:
+      'Neo-Traditional evolves traditional tattoo mechanics by incorporating varying line weights, illustrative storytelling, and an expanded vintage palette: peacock teals, burnt orange, mustard yellows, and rich burgundies inspired by Art Nouveau and Alphonse Mucha.',
+    artisticPhilosophy:
+      'We combine the structural longevity of classic bold outlines with the sensual elegance of early 20th-century decorative fine art.',
+    characteristics: [
+      {
+        title: 'Multi-Weight Line Variation',
+        badge: 'Dynamic Sculpted Lines',
+        description: 'Combines heavy contour boundaries with hairline internal filigree to create a sense of movement and visual rhythm.',
+        technicalNote: 'Varies from 3RL detail needles to 9RL outer structural framing.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Sophisticated Color Palettes',
+        badge: 'Lush Jewel Inks',
+        description: 'Moves far beyond primary colors into emeralds, ochre, lavender, plum, and antique brass tones.',
+        technicalNote: 'Custom pigment mixing on the palette for unique color harmonies.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Botanical & Fauna Framing',
+        badge: 'Organic Filigree',
+        description: 'Animals and portraits are naturally framed by winding poppies, chrysanthemums, serpents, and gilded halos.',
+        technicalNote: 'Conforms gracefully to body contours.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Illustrative Emotional Depth',
+        badge: 'Expressive Characters',
+        description: 'Eyes, expressions, and drapery are rendered with illustrative personality and rich storytelling.',
+        technicalNote: 'Combines realism lighting with graphic punch.',
+        iconType: 'eye',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-nt-1',
+        title: 'The Forest Huntress',
+        imageUrl: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Back Shoulder & Blade',
+        technique: 'Sculpted line weights with emerald jewel eye accents and poppies',
+        caption: 'The organic botanical halo frames the facial silhouette, creating an arresting contrast with warm skin tones.',
+      },
+      {
+        id: 'ex-nt-2',
+        title: 'Art Nouveau Serpent & Peony',
+        imageUrl: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Hip to Lateral Thigh',
+        technique: 'Iridescent scale texturing and burgundy petal gradations',
+        caption: 'Dynamic serpentine movement designed specifically to elongate and accentuate hip and leg curvature.',
+      },
+      {
+        id: 'ex-nt-3',
+        title: 'Gilded Woodland Fox',
+        imageUrl: 'https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Forearm Wrap',
+        technique: 'Burnt sienna fur tones with gold leaf filigree accents',
+        caption: 'Rich autumn color harmony anchored by bold black framing lines.',
+      },
+    ],
+    typicalSessionHours: '3 – 7 hours',
+    startingPriceGbp: '£220 / hr',
+    healedLongevity: 'Very High • Bold outlines protect vintage color fills',
+    painProfile: 'Moderate • Varied needle passes',
+    recommendedPlacements: ['Thigh', 'Shoulder Blade', 'Forearm', 'Calf'],
+  },
+
+  'Japanese': {
+    id: 'style-detail-japanese',
+    styleTag: 'Japanese',
+    serviceTitle: 'Japanese Tattoos (Irezumi)',
+    headline: 'Mythological Dragons, Dynamic Wave Flow & Full-Limb Bodysuits',
+    explanation:
+      'Irezumi is one of the most revered and complex traditions in the world. Rooted in Japanese Ukiyo-e woodblock prints and centuries of folklore, large background elements—wind bars, crashing ocean waves, clouds, and cherry blossom petals—create an unbroken organic flow across human musculature to frame iconic mythological beings.',
+    artisticPhilosophy:
+      'In authentic Irezumi, the tattoo is not placed on the body; it is born from the body. Every dragon claw, carp fin, and thundercloud breathes with the rhythm of movement.',
+    characteristics: [
+      {
+        title: 'Dynamic Background Flow',
+        badge: 'Mikiri & Wave Bars',
+        description: 'Black wind bars (kaze) and swirling ocean vortices (nami) weave between limbs to unify large-scale compositions seamlessly.',
+        technicalNote: 'Traditional framing borders that stop cleanly at cuffs and collars.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Authentic Mythological Lexicon',
+        badge: 'Ryu, Koi, Hannya, Botan',
+        description: 'Every element carries codified historic meaning: Koi swimming upstream signify perseverance; Dragons represent water and benevolence.',
+        technicalNote: 'Strict seasonal rule adherence (e.g. cherry blossoms paired with spring motifs).',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Limb & Torso Wrapping',
+        badge: '360° Anatomical Flow',
+        description: 'Designed to look spectacular from every angle as limbs flex, rotate, and stretch.',
+        technicalNote: 'Freehand anatomical drawing directly onto skin prior to stenciling.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Deep Sumi Black Packing',
+        badge: 'Rich Bokashi Gradients',
+        description: 'Slow, rhythmic ink graduation creating deep velvet fades that have characterized Japanese masterworks for centuries.',
+        technicalNote: 'Ages into magnificent timeless indigo-slate depths.',
+        iconType: 'clock',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-jp-1',
+        title: 'Ascending Ryu Dragon',
+        imageUrl: 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Kenji Sato',
+        placement: 'Full Sleeve (Wrist to Trapezius)',
+        technique: 'Dynamic wave vortices with deep crimson scales and gold claws',
+        caption: 'Notice how the dragon body coils naturally around the elbow joint and erupts over the shoulder cap.',
+      },
+      {
+        id: 'ex-jp-2',
+        title: 'Koi Fish in Whirlpool',
+        imageUrl: 'https://images.unsplash.com/photo-1582887640960-91500f488f72?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Kenji Sato',
+        placement: 'Forearm Wrap',
+        technique: 'Traditional sumi wave background with floating sakura petals',
+        caption: 'The upward trajectory of the swimming carp captures determination and dynamic water spray.',
+      },
+      {
+        id: 'ex-jp-3',
+        title: 'Hannya & Storm Clouds',
+        imageUrl: 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Kenji Sato',
+        placement: 'Back Panel / Shoulder',
+        technique: 'Bokashi grey shading with striking horn Chiaroscuro',
+        caption: 'Classic Japanese dramatic theatrical mask emerging from dense atmospheric storm squalls.',
+      },
+    ],
+    typicalSessionHours: '4 – 12+ hours (Multi-session projects)',
+    startingPriceGbp: '£250 / hr',
+    healedLongevity: 'Permanent Archival • Ages with majestic nobility',
+    painProfile: 'Moderate to High • Extended large-scale coverage',
+    recommendedPlacements: ['Full Sleeve', 'Full Backpiece', 'Leg Sleeve', 'Chest & Ribs'],
+  },
+
+  'Lettering': {
+    id: 'style-detail-lettering',
+    styleTag: 'Lettering',
+    serviceTitle: 'Lettering & Typography',
+    headline: 'Hand-Lettered Chicano Script, Gothic Blackletter & Architectural Inscriptions',
+    explanation:
+      'Typography is an intimate dialogue between spoken words and permanent visual identity. We reject generic system fonts; every phrase, Latin proverb, or monogram is hand-drawn to complement bodily curves, maintaining legibility and typographic rhythm over a lifetime.',
+    artisticPhilosophy:
+      'Letters must dance with bone structure. A straight line tattooed onto a curved bicep appears bent; letters must be drawn curved so they appear straight and powerful.',
+    characteristics: [
+      {
+        title: 'Bespoke Hand-Drawn Calligraphy',
+        badge: 'Zero Computer Fonts',
+        description: 'Every flourish, ligature, and drop shadow is penned by hand specifically for your body coordinates.',
+        technicalNote: 'Precision kerning prevents crowded letters after healing.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Diverse Script Disciplines',
+        badge: 'Gothic, Chicano & Cursive',
+        description: 'Mastery spanning aggressive Blackletter Fraktur, West Coast Chicano script, vintage typewriter minimal, and flowing Spencerian script.',
+        technicalNote: 'Razor-sharp serifs calibrated for long-term clarity.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Optical Curvature Mapping',
+        badge: 'Curvature Compensation',
+        description: 'Letters are drawn along anatomical contour lines (chest arches, collarbone slopes, forearm tendons).',
+        technicalNote: 'Moves organically without distortion during muscle flexion.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Rapid Healing Downtime',
+        badge: 'Low Dermal Impact',
+        description: 'Clean single-pass line tracking leads to rapid healing with minimal scabbing or discomfort.',
+        technicalNote: 'Typically fully settled within 7–10 days.',
+        iconType: 'shield',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-lt-1',
+        title: '“Memento Mori” Gothic Script',
+        imageUrl: 'https://images.unsplash.com/photo-1565058379802-dd120014a4bf?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Chest Arch',
+        technique: 'Hand-drawn Chicano-Gothic fusion with razor-sharp serifs',
+        caption: 'Notice the arched trajectory matching the clavicles and the subtle grey drop shadow giving the letters tactile lift.',
+      },
+      {
+        id: 'ex-lt-2',
+        title: 'Bespoke Roman Numeral Coordinates',
+        imageUrl: 'https://images.unsplash.com/photo-1590246814883-578301414436?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Lateral Wrist',
+        technique: 'Single-needle architectural serif lettering',
+        caption: 'Microscopic spacing between roman numerals maintaining sharp clarity without bleed.',
+      },
+      {
+        id: 'ex-lt-3',
+        title: 'Botanical Monogram Inscription',
+        imageUrl: 'https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Collarbone / Neck',
+        technique: 'Flowing italic script intertwined with micro olive branch leaves',
+        caption: 'Delicate intertwining of typography and botanical linework that sits gracefully on the collarbone.',
+      },
+    ],
+    typicalSessionHours: '1 – 3 hours',
+    startingPriceGbp: '£180 / hr',
+    healedLongevity: 'Permanent • Flawless legibility decades later',
+    painProfile: 'Low to Mild • Swift, focused procedure',
+    recommendedPlacements: ['Chest', 'Collarbone', 'Forearm', 'Ribs', 'Wrist'],
+  },
+
+  'Cover-Up': {
+    id: 'style-detail-cover-up',
+    styleTag: 'Cover-Up',
+    serviceTitle: 'Cover-Up Tattoos',
+    headline: 'Optical Camouflage, Metamorphosis & Strategic Value Redirection',
+    explanation:
+      'Transforming regret or scarred ink into museum-grade art requires advanced optical engineering. Rather than simply piling heavy black ink onto old tattoos, we analyze the existing pigment values, strategically weave dark textures into background elements, and position brilliant focal points that fool the human eye into seeing only the new masterpiece.',
+    artisticPhilosophy:
+      'A great cover-up is invisible. When people look at your finished tattoo, they should never suspect anything existed underneath.',
+    characteristics: [
+      {
+        title: 'Contrast & Value Redirection',
+        badge: 'Optical Deception',
+        description: 'Directs the viewer’s gaze toward high-contrast highlights and intricate details placed away from the darkest covered zones.',
+        technicalNote: 'Calculated using high-resolution skin photography.',
+        iconType: 'eye',
+      },
+      {
+        title: 'Organic Texture Camouflage',
+        badge: 'Feathers, Scales & Floral Depths',
+        description: 'Natural motifs like feathers, dragon scales, dense petals, and dark wood grain provide natural micro-patterns that swallow old lines.',
+        technicalNote: 'Prevents ghosting or bleed-through of old silhouettes.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Pigment Chemistry Mastery',
+        badge: 'Layered Pigment Trap',
+        description: 'Utilizes specialized opaque charcoal pigments and titanium dioxide white highlights that trap and neutralize underlying inks.',
+        technicalNote: 'Ensures the old tattoo does not float to the surface as skin renews.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Custom In-Person Consultation',
+        badge: 'Pre-Scan Evaluation',
+        description: 'Every project begins with a 30-minute studio scan to inspect scar tissue depth, skin elasticity, and ink density.',
+        technicalNote: 'We provide honest advice if 1–2 gentle laser lightening sessions would optimize the outcome.',
+        iconType: 'shield',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-cu-1',
+        title: 'Dark Floral Metamorphosis',
+        imageUrl: 'https://images.unsplash.com/photo-1582887640960-91500f488f72?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Outer Forearm',
+        technique: 'Multi-layer greywash camouflage over 10-year-old tribal script',
+        caption: 'The old angular lines are completely absorbed into deep obsidian rose foliage and velvety background shading.',
+      },
+      {
+        id: 'ex-cu-2',
+        title: 'Feathered Wing Transformation',
+        imageUrl: 'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Upper Arm & Shoulder',
+        technique: 'Sculptural angel wing layered directly over faded lettering',
+        caption: 'The viewer’s eyes are immediately drawn to the bright, luminous feather tips, leaving zero trace of the underlying text.',
+      },
+      {
+        id: 'ex-cu-3',
+        title: 'Irezumi Wave Masking',
+        imageUrl: 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Kenji Sato',
+        placement: 'Forearm Wrap',
+        technique: 'Heavy sumi wind bars and crashing water droplets',
+        caption: 'Bold traditional Japanese black background bars naturally mask uneven faded tones.',
+      },
+    ],
+    typicalSessionHours: '4 – 8+ hours (Usually 2 sessions)',
+    startingPriceGbp: '£260 / hr',
+    healedLongevity: 'Guaranteed 100% Camouflage with proper aftercare',
+    painProfile: 'Moderate to High • Multi-pass pigment saturation',
+    recommendedPlacements: ['Forearm', 'Upper Arm', 'Back', 'Thigh'],
+  },
+
+  'Minimalist': {
+    id: 'style-detail-minimalist',
+    styleTag: 'Minimalist',
+    serviceTitle: 'Minimalist Tattoos',
+    headline: 'Distilled Geometry, Golden Ratio Proportions & Quiet Sophistication',
+    explanation:
+      'Minimalist tattooing is the intentional art of elimination. By stripping away excess shading and superfluous embellishments, each line, geometric circle, or miniature glyph carries profound significance and timeless quiet confidence.',
+    artisticPhilosophy:
+      'Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away.',
+    characteristics: [
+      {
+        title: 'Golden Ratio Geometry',
+        badge: 'Mathematical Proportion',
+        description: 'Circles, lines, and micro-symbols adhere to classical Euclidean and Golden Ratio proportions.',
+        technicalNote: 'Creates instantaneous visual harmony on the human silhouette.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Ultra-Crisp Micro Inking',
+        badge: 'Zero Clutter',
+        description: 'Clean single-pass tracking ensures lines settle without feathering, blur, or wobbles.',
+        technicalNote: 'Requires absolute needle stability and precision depth stop.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Discreet Placements',
+        badge: 'Everyday Elegance',
+        description: 'Seamlessly accommodates modern corporate or creative life; easily showcased or discreetly tucked away.',
+        technicalNote: 'Behind ear, inner finger side, collarbone, or above ankle.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Fast Healing & Low Trauma',
+        badge: 'Minimal Downtime',
+        description: 'The gentlest tattooing experience possible with virtually zero recovery downtime.',
+        technicalNote: 'Skin returns to smooth natural texture in 5–7 days.',
+        iconType: 'shield',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-mn-1',
+        title: 'Minimalist Horizon Line',
+        imageUrl: 'https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Above Lateral Ankle',
+        technique: 'Continuous single-stroke mountain ridge with dot-matrix altitude marks',
+        caption: 'A subtle, refined ode to the wilderness that sits like fine jewelry against the ankle bone.',
+      },
+      {
+        id: 'ex-mn-2',
+        title: 'Sacred Fibonacci Geometry',
+        imageUrl: 'https://images.unsplash.com/photo-1590246814883-578301414436?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Inner Wrist',
+        technique: 'Concentric circle rings and celestial alignment dots',
+        caption: 'Pure geometry rendered with hairline fidelity and perfect radial symmetry.',
+      },
+      {
+        id: 'ex-mn-3',
+        title: 'Micro Constellation Orion',
+        imageUrl: 'https://images.unsplash.com/photo-1565058379802-dd120014a4bf?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Inner Bicep',
+        technique: 'Micro-star dots linked with faint silver guide lines',
+        caption: 'Discreet and intimate astronomical notation requiring zero daily maintenance.',
+      },
+    ],
+    typicalSessionHours: '1 – 2.5 hours',
+    startingPriceGbp: '£150 / hr',
+    healedLongevity: 'Permanent • Clean, discreet longevity',
+    painProfile: 'Very Low • Ideal introductory ink',
+    recommendedPlacements: ['Inner Wrist', 'Behind Ear', 'Ankle', 'Collarbone', 'Ribs'],
+  },
+
+  'Sleeve': {
+    id: 'style-detail-sleeve',
+    styleTag: 'Sleeve',
+    serviceTitle: 'Full & Half Sleeve Tattoos',
+    headline: 'Monumental Multi-Session Storytelling & 360° Anatomical Architecture',
+    explanation:
+      'A full or half sleeve is an ambitious, unified work of bodily architecture. Rather than a patchwork of unrelated stickers, we curate a cohesive thematic roadmap that flows across shoulder caps, biceps, elbow hinge points, and wrists with complete harmony.',
+    artisticPhilosophy:
+      'A sleeve must read as one cohesive masterpiece from across the room, while revealing intricate microscopic secrets upon intimate inspection.',
+    characteristics: [
+      {
+        title: '360° Limb Wrapping',
+        badge: 'Zero Dead Zones',
+        description: 'Artwork seamlessly connects the inner and outer arm without awkward seams, blank patches, or disjointed styles.',
+        technicalNote: 'Hand-drawn muscle mapping accounts for arm twists and rotations.',
+        iconType: 'layers',
+      },
+      {
+        title: 'Multi-Session Project Roadmap',
+        badge: 'Dedicated Milestone Booking',
+        description: 'Structured in 4 to 8 distinct session blocks spaced 3–4 weeks apart for optimal dermal recovery and comfort.',
+        technicalNote: 'Full digital preview mockup provided prior to first needle stroke.',
+        iconType: 'clock',
+      },
+      {
+        title: 'Unified Foreground & Background',
+        badge: 'Visual Hierarchy',
+        description: 'Combines bold primary focal characters with smoke, wind, filigree, or atmospheric textures that bind the sleeve into one canvas.',
+        technicalNote: 'Balances dense value centers with open skin breathability.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Comprehensive Studio Aftercare',
+        badge: 'Dedicated Recovery Kit',
+        description: 'Every sleeve client receives our complete medical aftercare package, second-skin dermal bandages, and direct artist WhatsApp check-ins.',
+        technicalNote: 'Ensures even, healthy healing across large skin surfaces.',
+        iconType: 'shield',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-sl-1',
+        title: 'The Fallen Archangel Half-Sleeve',
+        imageUrl: 'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Right Upper Arm & Shoulder Cap',
+        technique: 'Sculptural chiaroscuro with atmospheric smoke wrapping to inner arm',
+        caption: 'The muscular curvature of the shoulder cap becomes the anatomical foundation for the archangel’s expansive wings.',
+      },
+      {
+        id: 'ex-sl-2',
+        title: 'Ascending Ryu Full Sleeve',
+        imageUrl: 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Kenji Sato',
+        placement: 'Full Arm (Wrist to Chest Munewari)',
+        technique: 'Authentic Irezumi wind bars and koi whirlpools',
+        caption: 'Total seamless integration from the wrist cuff up to the pectoral chest panel.',
+      },
+      {
+        id: 'ex-sl-3',
+        title: 'Botanical & Mythic Full Sleeve',
+        imageUrl: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Full Sleeve (Shoulder to Wrist)',
+        technique: 'Continuous Art Nouveau vines, poppies, and forest huntress portrait',
+        caption: 'Warm jewel tones woven together with continuous flowing filigree bands.',
+      },
+    ],
+    typicalSessionHours: '15 – 35+ hours (Across 4–8 sessions)',
+    startingPriceGbp: '£240 / hr',
+    healedLongevity: 'Archival Masterpiece • Lifelong statement piece',
+    painProfile: 'Moderate to High • Involves sensitive elbow and inner bicep zones',
+    recommendedPlacements: ['Full Arm', 'Half Arm (Upper or Lower)', 'Leg Sleeve'],
+  },
+
+  'Custom Designs': {
+    id: 'style-detail-custom-designs',
+    styleTag: 'Custom Designs',
+    serviceTitle: 'Custom Designs & Bespoke Tattoos',
+    headline: 'One-of-a-Kind Archival Concepts • Inked Once, Retired Forever',
+    explanation:
+      'We do not replicate work from Pinterest, Instagram, or flash books. Every bespoke concept is born through an in-depth private consultation, hand-drawn digital mockups aligned with your muscle flow, and individualized stencil fittings.',
+    artisticPhilosophy:
+      'Your skin is unique. Your life story is unrepeatable. Your tattoo should be an exclusive artifact that exists nowhere else on earth.',
+    characteristics: [
+      {
+        title: 'One-and-Done Guarantee',
+        badge: 'Never Replicated',
+        description: 'Once inked on your skin, the original stencil drawing is sealed into our studio archive and retired forever.',
+        technicalNote: 'You receive a signed Certificate of Provenance from the artist.',
+        iconType: 'shield',
+      },
+      {
+        title: '1-on-1 Concept Consultation',
+        badge: 'Private Design Dialogue',
+        description: 'Sit down with your dedicated master artist over espresso in our private Soho lounge to dissect your references and story.',
+        technicalNote: 'Full anatomy digital overlay mockups prior to session day.',
+        iconType: 'sparkle',
+      },
+      {
+        title: 'Anatomy-First Composition',
+        badge: 'Sculpted to Muscle Flow',
+        description: 'We draw dynamic guide curves directly onto your skin with surgical pens to ensure optimal aesthetic flow.',
+        technicalNote: 'Accentuates natural muscle contours and posture.',
+        iconType: 'needle',
+      },
+      {
+        title: 'Complimentary 90-Day Touch-Up',
+        badge: 'Studio Archival Warranty',
+        description: 'Includes a scheduled 90-day post-heal review with complimentary pigment refinement if needed.',
+        technicalNote: 'Ensures permanent perfection for the life of the tattoo.',
+        iconType: 'clock',
+      },
+    ],
+    exampleImages: [
+      {
+        id: 'ex-cd-1',
+        title: 'Anatomy of Time Chronos',
+        imageUrl: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Marcus Thorne',
+        placement: 'Outer Bicep & Tricep',
+        technique: 'Bespoke cracked hourglass concept merged with skull anatomy',
+        caption: 'Born from a client’s personal philosophy on mortality and fleeting seconds.',
+      },
+      {
+        id: 'ex-cd-2',
+        title: 'Art Nouveau Serpent & Peony',
+        imageUrl: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Hip & Upper Thigh',
+        technique: 'Freehand serpent body flow drawn directly onto the client',
+        caption: 'Tailored specifically to accentuate hip curvature with zero template constraints.',
+      },
+      {
+        id: 'ex-cd-3',
+        title: 'Celestial Botanical Rose',
+        imageUrl: 'https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1200&q=85',
+        artist: 'Elena Rostova',
+        placement: 'Inner Forearm',
+        technique: 'Bespoke botanical composition integrating personal astrology orbits',
+        caption: 'An intimate, original constellation layout that exists exclusively for this collector.',
+      },
+    ],
+    typicalSessionHours: '2 – 8+ hours',
+    startingPriceGbp: '£250 / hr',
+    healedLongevity: 'Permanent Bespoke Masterwork',
+    painProfile: 'Varies by anatomical placement',
+    recommendedPlacements: ['Any anatomical location tailored to design'],
+  },
+};
+
+// Helper function to resolve style details by tag or title
+export function getTattooStyleDetail(styleIdentifier: string): TattooStyleDetail {
+  // Check exact tag match
+  if (TATTOO_STYLE_DETAILS[styleIdentifier]) {
+    return TATTOO_STYLE_DETAILS[styleIdentifier];
+  }
+
+  // Check by matching service title or partial styleTag
+  const normalized = styleIdentifier.toLowerCase();
+  for (const key of Object.keys(TATTOO_STYLE_DETAILS)) {
+    const detail = TATTOO_STYLE_DETAILS[key];
+    if (
+      detail.serviceTitle.toLowerCase().includes(normalized) ||
+      detail.styleTag.toLowerCase().includes(normalized) ||
+      normalized.includes(detail.styleTag.toLowerCase())
+    ) {
+      return detail;
+    }
+  }
+
+  // Fallback to Fine Line or Black & Grey
+  return TATTOO_STYLE_DETAILS['Fine Line'];
+}

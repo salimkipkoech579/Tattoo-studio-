@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #08090b;
+    color: #e2e4e9;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.03em;
+  }
+
+  .font-quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom styling for luxury dark palette */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #242831;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f3e7c4 0%, #c5a059 50%, #9e7b39 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metallic-border {
+  border-color: rgba(197, 160, 89, 0.25);
+}
+
+.charcoal-card {
+  background-color: #0f1217;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+

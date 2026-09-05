@@ -1,0 +1,6 @@
+{
+  "name": "Ink Haven Tattoo Studio",
+  "description": "Ink Haven Tattoo Studio - London, United Kingdom bespoke tattoo atelier specializing in fine line, black & grey, realism, Japanese Irezumi, and custom compositions with interactive style guides and consultation booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
